@@ -1,8 +1,8 @@
-import React from "react";
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import React from 'react';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 
-import CommentContainer from "./commentcontainer";
+import CommentContainer from './Comment';
 
 const GET_ONE_POST = gql`
   query GetPost($postId: String!) {

@@ -1,8 +1,7 @@
 import React from 'react';
 import logo from '../logo.svg';
 import '../styles/App.css';
-import Routes from './routes';
-import Header from './Header';
+import { Header, Routes } from '.';
 
 function App() {
   return (

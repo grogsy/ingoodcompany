@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
-import { AUTH_TOKEN, USER } from '../constants';
+import { AUTH_TOKEN, USER } from '../../constants';
 
 class Header extends React.Component {
   render() {
@@ -23,9 +23,9 @@ class Header extends React.Component {
                 >
                   logout
                 </div>
-              </Link> 
+              </Link>
               <Link to="/create">
-              <div>create a community</div>
+                <div>create a community</div>
               </Link>
             </div>
           ) : (

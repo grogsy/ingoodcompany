@@ -1,11 +1,10 @@
-import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
-import { Query } from "react-apollo";
-import gql from "graphql-tag";
+import React from 'react';
+import { Link, Route, Switch } from 'react-router-dom';
+import { Query } from 'react-apollo';
+import gql from 'graphql-tag';
 
-import About from "./about";
-import Posts from "./posts";
-import Thread from "./thread";
+import About from './about';
+import { Posts, Thread } from './Post';
 
 // do abouts
 const GET_COMMUNITY = gql`
@@ -32,7 +31,7 @@ export default class Community extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: props.match.params.community
+      id: props.match.params.community,
     };
   }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AUTH_TOKEN, USER } from '../constants';
+import { AUTH_TOKEN, USER } from '../../constants';
 import { Mutation } from 'react-apollo';
 import gql from 'graphql-tag';
 
@@ -86,7 +86,7 @@ class Login extends Component {
             value={this.state.password}
             onChange={e => this.setState({ password: e.target.value })}
             type="password"
-            placeholder="Choose a safe password"
+            placeholder="Password"
           />
         </div>
         <div>
@@ -95,15 +95,10 @@ class Login extends Component {
             variables={this.state}
             onCompleted={data => this._confirm(data)}
           >
-            {mutation => (
-              <button onClick={mutation}>
-                {' '}
-                {login ? 'login' : 'create account'}{' '}
-              </button>
-            )}
+            {mutation => <button onClick={mutation}> Submit </button>}
           </Mutation>
           <button onClick={() => this.setState({ login: !login })}>
-            {login ? 'need to create an account?' : 'already have an account?'}
+            {login ? 'Click Here to Create Account' : 'Click Here to Login'}
           </button>
         </div>
       </div>
@@ -118,7 +113,6 @@ class Login extends Component {
 
   //Save user data in local storage
   _saveUserData = (token, username) => {
-    console.dir(username);
     localStorage.setItem(AUTH_TOKEN, token);
     localStorage.setItem(USER, username);
   };

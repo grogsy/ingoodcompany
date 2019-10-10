@@ -1,5 +1,5 @@
-export { default as HomePage } from './home';
-export { default as Login } from './Login';
-export { default as Profile } from './profilepage';
-export { default as Community } from './community';
-export { default as CreatePage } from './create';
+export { Landing, Login } from './Landing';
+export { default as UserHome } from './UserHome';
+export { Community, CreateCommunity } from './Community';
+export { default as Header } from './Nav';
+export { default as Routes } from './Routes';
